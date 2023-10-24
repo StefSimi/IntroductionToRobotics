@@ -13,8 +13,27 @@ This repository serves as a comprehensive record of my journey through the 'Intr
   ### Task:
   #### Use a separate potentiometer for controlling each color of the RGB LED: Red,Green, and Blue. This control must leverage digital electronics. Specifically, you need to read the potentiometer’s value with Arduino and then write a mapped value to the LED pins.
 
+ <details>
+   <summary>
+     <h3>Parts used:
+   </summary>
+    -Arduino UNO board <br>
+    -Breadboard <br>
+    -1 RGB LED <br>
+    -3 Potentiometers <br>
+    -3 220Ω Resistors <br>
+    -Wires as needed <br>
+   
+ </details>
+
   ### [Code](https://github.com/StefSimi/IntroductionToRobotics/blob/main/HW1_RGB.ino)
   ### [Video](https://www.youtube.com/shorts/qgwaxqFKWgs)
+
+  
+  ### Fritzing Schematic:
+  ### ![Fritzing schematic](https://github.com/StefSimi/IntroductionToRobotics/assets/98825330/15ec6250-83c8-41b5-8002-4444f1e41fcb)
+
+  ### Real-life setup:
   ### ![Setup](https://github.com/StefSimi/IntroductionToRobotics/assets/98825330/e38f9298-f36c-462c-ab02-1cd9aef39add)
 </details>
 
