@@ -30,7 +30,7 @@ This repository serves as a comprehensive record of my journey through the 'Intr
   ### [Video Showcase](https://www.youtube.com/shorts/qgwaxqFKWgs)
 
   
-  ### Fritzing Schematic:
+  ### Fritzing Schematic
   ### ![Fritzing schematic](https://github.com/StefSimi/IntroductionToRobotics/assets/98825330/15ec6250-83c8-41b5-8002-4444f1e41fcb)
 
   ### Real-life setup:
@@ -44,18 +44,13 @@ This repository serves as a comprehensive record of my journey through the 'Intr
   <br>
   
   ### Task:
-  #### Design a control system that simulates a 3-floor elevator using the Arduino platform:
-  <br>
-  -<b>LED Indicators</b>: Each of the 3 LEDs should represent one of the 3 floors. The LED corresponding to the current floor should light up.  Additionally, another LED should represent the elevator’s operational state.  It should blink when the elevator is moving and remain static when stationary;<br>
-  -<b>Buttons</b>: Implement 3 buttons that represent the call buttons from the 3 floors. When pressed, the elevator should simulate movement towardsthe floor after a short interval (2-3 seconds);<br>
-  -<b>Buzzer</b>: The buzzer should sound briefly during the following scenarios:<br>1. Elevator arriving at the desired floor (something resembling a ”cling”); <br>2. Elevator doors closing and movement;<br>
-  -<b>State Change & Timers</b>:If the elevator is already at the desired floor, pressing the button for that floor should have no effect. Otherwise, after a button press, the elevator should "wait for the doors to close" and then "move" to the corresponding floor. If  the  elevator  is  in  movement, it should either do nothing or it should stack its decision (get to the first programmed floor, open the doors, wait, close them and then go to thenext desired floor).<br>
-  -<b>Debounce</b>:Remember to implement debounce for the buttons to avoidunintentional repeated button presses.
+  #### Design a control system that simulates an elevator using the Arduino platform:
+  -<b>LEDs</b>: Every red LED represents a unique floor. When the elevator is on a floor, its LED will light up. There is an additional blue LED that represents the elevator’s operational state. Specifically, it will blink if the elevator is moving, and remain lit up when the elevator is stationary;<br>
+  -<b>Buttons</b>: The assignment specified that there need to be 3 buttons that represent call buttons from each floor. However, I implemented the code in such a way so that it supports any number of buttons (the circuit I made has 5 for demonstrational purposes). Debouncing has also been implemented;
+  -<b>Buzzer</b>: I added fancy sounds for door closing and opening, as well as elevator music.<br>
+  -<b>State Change & Timers</b>:If the elevator is already at the desired floor, pressing the button for that floor has no effect. Otherwise, after a button press, the elevator waits for the doors to close (represented by a sound effect), and then moves to the corresponding floor, by visiting (not stopping) each floor along the way, such as a real life elevator (it does not simply teleport to the desired floor). Additionally, when the elevator receives an input, and then receives another that would take it to a floor that is closer to the elevator than the initial input (but maintains the same direction of movement), it will go to the second input first, and then go to the floor with the initial one. This is demonstrated in the video showcase;
 
-  #### Personal comments:
-  Besides the required tasks, I implemented the code in such a way so that it supports any number of buttons (the circuit I made has 5), I added fancy sounds for door closing and opening, as well as elevator music.<br>
-  Additionally, when the elevator receives an input, and then receives another that would take it to a floor that is closer to the elevator than the initial input (but maintains the same direction of movement), it will go to the second input first, and then go to the floor with the initial one. This is demonstrated in the video showcase;
-
+  
   <details>
    <summary>
      <h3>Parts used:
@@ -65,7 +60,7 @@ This repository serves as a comprehensive record of my journey through the 'Intr
     -6 LEDs <br>
     -6 220Ω Resistors <br>
     -1 Active buzzer <br>
-    -1 100Ω resistors <br>
+    -1 100Ω Resistor <br>
     -3 Buttons <br>
     -Wires as needed <br>
  </details>
@@ -76,7 +71,7 @@ This repository serves as a comprehensive record of my journey through the 'Intr
   ### [Video](https://www.youtube.com/watch?v=B9fQ2LgqtxA)
 
   
-  ### Fritzing Schematic:
+  ### [Fritzing Schematic](https://github.com/StefSimi/IntroductionToRobotics/blob/main/HW1_RGB.ino)
   ### ![Fritzing_schematic](https://github.com/StefSimi/IntroductionToRobotics/assets/98825330/903cf807-3c90-4ee5-84ae-f3ab0057d209)
 
   ### Real-life setup:
