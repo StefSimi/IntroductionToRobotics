@@ -71,11 +71,54 @@ This repository serves as a comprehensive record of my journey through the 'Intr
   ### [Video](https://www.youtube.com/watch?v=B9fQ2LgqtxA)
 
   
-  ### [Fritzing Schematic](https://github.com/StefSimi/IntroductionToRobotics/blob/main/HW1_RGB.ino)
+  ### [Fritzing Schematic](https://github.com/StefSimi/IntroductionToRobotics/blob/main/HW2_Elevator_Fritz.fzz)
   ### ![Fritzing_schematic](https://github.com/StefSimi/IntroductionToRobotics/assets/98825330/903cf807-3c90-4ee5-84ae-f3ab0057d209)
 
   ### Real-life setup:
   ### ![Setup](https://github.com/StefSimi/IntroductionToRobotics/assets/98825330/43a87237-4806-4fee-b743-656864f8df84)
 </details>
 
+<br>
+<details>
+  <summary>
+    <h2>Homework 3: 7 Segment Display drawing</h2>
+  </summary>
+  <br>
+
+  ### Task:
+  #### Use a joystick to control the position of the display and draw on the 7 Segment Display.
+  -<b>Joystick</b>: Implementing multi-directional movement detection for the joystick can be challenging. The implementation is rigorously explained in the code;
+  -<b>Multi-function button</b>: When the button is pressed for a short time, the segment that we are currently on will toggle between on and off. When the button is pressed for a longer time, all of the segments turn off, and the position of the current segment is set back to DP;<br>
+  -<b>Interrupts</b>: Using interrupts to implement debouncing for a button that has multiple functions, depending on how long it is pressed, leads to very ugly code. Furthermore, the interrupt code is not very well optimized for multiple quick button presses, which is exactly what we do with the button in this homework, so it only exists as a proof of concept;<br>
+  -<b>Blinking</b>: The current segment should blink, wheter it is lit up or not;
+  -<b>Movement</b>: Travelling between segments should feel very fluid. Here is a table detailing the movement from each segment: <br>
+  
+  ### ![Movement](https://github.com/StefSimi/IntroductionToRobotics/assets/98825330/301387ee-e002-42f1-95ee-a23de47f8b8c)
+
+<details>
+   <summary>
+     <h3>Parts used:
+   </summary>
+    -Arduino UNO board <br>
+    -1 Breadboard <br>
+    -1 common anone 7 Segment Display <br>
+    -8 220Ω Resistors <br>
+    -1 Joystick <br>
+    -Wires as needed <br>
+ </details>
+
+  ### [Code](https://github.com/StefSimi/IntroductionToRobotics/blob/main/HW3_7SD.ino)
+  ### [Video](https://www.youtube.com/watch?v=xi_0ALrA4u4)
+
+  
+  ### [Fritzing Schematic](https://github.com/StefSimi/IntroductionToRobotics/blob/main/HW3_7SD_Fritz.fzz)
+  ### ![Fritzing schematic](https://github.com/StefSimi/IntroductionToRobotics/assets/98825330/c57788c7-7c40-43af-95c8-b550cce67666)
+
+
+
+  ### Real-life setup:
+  ### ![Setup](https://github.com/StefSimi/IntroductionToRobotics/assets/98825330/7353b3ea-74f8-41fd-8b70-ff5566e538a8)
+
+  
+</details>
 
