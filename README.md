@@ -87,7 +87,7 @@ This repository serves as a comprehensive record of my journey through the 'Intr
 
   ### Task:
   #### Use a joystick to control the position of the display and draw on the 7 Segment Display.
-  -<b>Joystick</b>: Implementing multi-directional movement detection for the joystick can be challenging. The implementation is rigorously explained in the code;
+  -<b>Joystick</b>: Implementing multi-directional movement detection for the joystick can be challenging. The implementation is rigorously explained in the code;<br>
   -<b>Multi-function button</b>: When the button is pressed for a short time, the segment that we are currently on will toggle between on and off. When the button is pressed for a longer time, all of the segments turn off, and the position of the current segment is set back to DP;<br>
   -<b>Interrupts</b>: Using interrupts to implement debouncing for a button that has multiple functions, depending on how long it is pressed, leads to very ugly code. Furthermore, the interrupt code is not very well optimized for multiple quick button presses, which is exactly what we do with the button in this homework, so it only exists as a proof of concept;<br>
   -<b>Blinking</b>: The current segment should blink, wheter it is lit up or not;
@@ -118,6 +118,54 @@ This repository serves as a comprehensive record of my journey through the 'Intr
 
   ### Real-life setup:
   ### ![Setup](https://github.com/StefSimi/IntroductionToRobotics/assets/98825330/7353b3ea-74f8-41fd-8b70-ff5566e538a8)
+
+  
+</details>
+
+<br>
+<details>
+  <summary>
+    <h2>Homework 4: Stopwatch Timer</h2>
+  </summary>
+  <br>
+
+  ### Task:
+  #### Implement a Stopwatch Timer using a 4 Digit 7 Segment Display
+  
+  -<b>Buttons</b>: The circuit has 3 buttons: 1 for Starting/ Pausing the stopwatch, 1 for resetting it, and the last one for saving lap times and cycling through them when the stopwatch has just been reset. Aditionally, when the stopwatch is in lap viewing mode and the reset button is pressed, all lap times will be deleted. Debouncing has been implemented for each button;<br>
+  -<b>Interrupts</b>: In order to maximise precision, debouncing has been implemented on both the Start/ Pause and Lap buttons. Aditionally, when the timer is paused, the remaining time until the stopwach is incremented again is saved, so there is no lost time;<br>
+  -<b>Shift Register</b>: The 4 Digit 7 Segment Display has 12 total pins. If we connect it directly to the Arduino UNO board, it will take up most of its digital pins. However, we can use the 74HC595 Shift Register in order to free more than half of those pins up;<br>
+  -<b>Remote Control</b>: I attached an IR sensor to the circuit, so now the stopwatch can be controlled remotely. Aditionally, I added some more features to the remote:<br>
+  -By using the fast forward/ backward buttons, you can cycle through your saved laps in both directions;<br>
+  -You can use the numbers on the remote to input a starting time when the stopwatch is in reset mode;<br>
+  -The 100+ and 200+ buttons can be used to add that amount of time to the starting time when the stopwatch is in reset mode;
+
+<details>
+   <summary>
+     <h3>Parts used:
+   </summary>
+    -Arduino UNO board <br>
+    -2 Breadboards <br>
+    -1 common cathode 4 Digit 7 Segment Display <br>
+    -8 220Ω Resistors <br>
+    -1 74HC595 Shift Register <br>
+    -1 IR Sensor <br>
+    -1 Remote <br>
+    -Wires as needed <br>
+ </details>
+
+
+  ### [Code](https://github.com/StefSimi/IntroductionToRobotics/blob/main/HW4_Stopwatch.ino)
+  ### [Video](https://www.youtube.com/watch?v=4mRAwRTBGtM)
+
+  
+  ### [Fritzing Schematic](https://github.com/StefSimi/IntroductionToRobotics/blob/main/HW4_Stopwatch_Fritz.fzz)
+  ### ![Fritzing schematic](https://github.com/StefSimi/IntroductionToRobotics/assets/98825330/31fea2db-03b8-4645-9925-44e00c36dd61)
+
+
+
+  ### Real-life setup:
+  ### ![Setup](https://github.com/StefSimi/IntroductionToRobotics/assets/98825330/bf6fb46a-377d-41a3-9a9c-946564108e40)
 
   
 </details>
