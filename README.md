@@ -170,3 +170,51 @@ This repository serves as a comprehensive record of my journey through the 'Intr
   
 </details>
 
+
+<br>
+<details>
+  <summary>
+    <h2>Homework 5: Environment Logger</h2>
+  </summary>
+  <br>
+
+  ### Task:
+  #### Implement a pseudo-smart Environment Monitor and Logger that saves its settings in the Arduino's EEPROM
+  
+-<b>Serial input</b>: The monitoring system operates through a sophisticated menu that takes input via Serial Communication. Given the menu's complexity, featuring various submenus, precise control variables are essential. Additionally, we must implement effective error-handling procedures to manage instances where user-input values could potentially interfere with our sensors. <br>
+-<b>EEPROM</b>: The Arduino's EEPROM has a limited number of write cycles before potential failure. Consequently, careful consideration is necessary when determining what data to write and when to perform these write operations to ensure optimal utilization and longevity of the EEPROM. <br>
+-<b>Sensors</b>: The HC-SR04 Ultrasonic Sensor produces seemingly random values. To obtain accurate results, it is essential to carefully process these values, account for the speed of sound, and interpret results only after comprehensive data refinement. <br>
+
+  
+  
+  
+
+<details>
+   <summary>
+     <h3>Parts used:
+   </summary>
+    -Arduino UNO board <br>
+    -1 Breadboard <br>
+    -RGB LED <br>
+    -3 330Ω Resistors <br>
+    -1 Photocell<br>
+    -1 10KΩ Resistor <br>
+    -1 HC-SR04 Ultrasonic Sensor <br>
+    -Wires as needed <br>
+ </details>
+
+
+  ### [Code](https://github.com/StefSimi/IntroductionToRobotics/blob/main/HW5_Environment_Logger.ino)
+  ### [Video](https://www.youtube.com/watch?v=x8HZ40uMmbk)
+
+  
+  ### [Fritzing Schematic](https://github.com/StefSimi/IntroductionToRobotics/blob/main/HW5_Environment_Logger_Fritz.fzz)
+  ### ![Fritzing schematic](https://github.com/StefSimi/IntroductionToRobotics/assets/98825330/3bded13a-59be-4b10-8dac-0c7f729eb038)
+
+
+
+  ### Real-life setup:
+  ### ![Setup](https://github.com/StefSimi/IntroductionToRobotics/assets/98825330/d1f0365a-7e09-4ede-8a69-e9e48112b3f7)
+
+  
+</details>
