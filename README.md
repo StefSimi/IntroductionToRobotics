@@ -195,7 +195,7 @@ This repository serves as a comprehensive record of my journey through the 'Intr
    </summary>
     -Arduino UNO board <br>
     -1 Breadboard <br>
-    -RGB LED <br>
+    -1 RGB LED <br>
     -3 330Ω Resistors <br>
     -1 Photocell<br>
     -1 10KΩ Resistor <br>
@@ -215,6 +215,67 @@ This repository serves as a comprehensive record of my journey through the 'Intr
 
   ### Real-life setup:
   ### ![Setup](https://github.com/StefSimi/IntroductionToRobotics/assets/98825330/d1f0365a-7e09-4ede-8a69-e9e48112b3f7)
+
+  
+</details>
+
+
+<br>
+<details>
+  <summary>
+    <h2>Homework 6: Matrix Game Demo</h2>
+  </summary>
+  <br>
+
+  ### Task:
+  #### Develop a simple game on the 8X8 LED Matrix
+
+-<b>Game</b>: The game is very straightforward: You are a dot. Your objective is to destory all enemies in the room, represented by other dots that are procedurally generated. In order to do so you can shoot projectiles, that explode in a 3x3 radius whenever they hit an enemy. Be careful! If you are caught inside the explosion, you will also die :) <br>
+-<b>Frames</b>: The game plays at set rate of 60 frames per second (FPS). During each frame, every entity inside of the game is updated, and then the matrix is rendered. Working at a set FPS can be very befenicial for upscaling this project, however, it also introduces multiple problems. For instance, if the player can move 1 position every frame, then it it will cross the matrix in 8 frames, which is about 133 milliseconds. To combat this, we can either update the player position every so often, which would in turn cause even more problems, or introduce floating point logic for every single entity position, which may sound complicated, but all that it does is change the positions by a little bit during each frame, and if these changes add up to an integer, then the position on the matrix changes;<br>
+-<b>Bullets</b>: In order to fire bullets, I added an additional joystick to control the direction in which bullets are fired. Working with floating points has an unexpected benefit here, making it really easy to implement 360 degree shooting;<br>
+-<b>Score</b>: In order to make the game more fun, a scoring system has been introduced. Currently, this is only displayed on the Serial monitor, however, this will change in the future. The score works as follows:<br>
+-Whenever an enemy is killed, 100 points are added; <br>
+-To enhance skill expression, players earn 100 additional points for each enemy caught in an explosion, in addition to the points awarded for the last enemy. For instance, if a player eliminates four enemies with a single explosion, they receive 1000 points (100 + 200 + 300 + 400);<br>
+-Every frame, it ticks down by 1 point, making speed of upmost importance;<br>
+-If the player dies, 250 points will be subtracted for each enemy that is still alive;<br>
+-<b>Sound</b>: Sound effects have been incorporated for shooting, explosions, winning the game, and losing the game;<br>
+-<b>Game End</b>: When the game ends, a corresponding image is displayed: a skull, if the player looses, or a "GG" message, if the player wins. Additionally, if the player beats the highscore, the new highscore is saved in the EEPROM; <br>
+-<b>Controller</b>: Holding two joysticks in your hands can be uncomfortable due to the sharp and pointy ends of the soldering. To create a more game-like experience, I resolved this by duct-taping the two joysticks to a piece of cardboard, essentially fashioning a makeshift controller;<br>
+
+  
+  
+  
+
+<details>
+   <summary>
+     <h3>Parts used:
+   </summary>
+    -Arduino UNO board <br>
+    -2 Breadboards <br>
+    -1 8X8 LED Matrix <br>
+    -1 MAX7219 Driver <br>
+    -1 100nF capacitor<br>
+    -1 10µF capacitor <br>
+    -1 51KΩ Resistor <br>
+    -1 Active Buzzer <br>
+    -1 100Ω Resistor <br>
+    -2 Joysticks <br>
+    -Wires as needed <br>
+    -Cardboard <br>
+    -Duct tape <br>
+ </details>
+
+
+  ### [Code](https://github.com/StefSimi/IntroductionToRobotics/blob/main/HW6_Matrix_Game_Demo.ino)
+  ### [Video](https://www.youtube.com/watch?v=gXSf0c-TrlY)
+
+  
+  ### [Fritzing Schematic](https://github.com/StefSimi/IntroductionToRobotics/blob/main/HW6_Matrix_Game_Demo.fzz)
+  ### ![Fritzing schematic](https://github.com/StefSimi/IntroductionToRobotics/assets/98825330/331b34e3-a74f-4404-b024-7745aa9f4425)
+
+
+  ### Real-life setup:
+  ### ![Setup](https://github.com/StefSimi/IntroductionToRobotics/assets/98825330/07abfb7f-2f74-4de9-8315-250c7db67d56)
 
   
 </details>
