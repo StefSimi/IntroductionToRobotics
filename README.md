@@ -1,4 +1,4 @@
-# IntroductionToRobotics
+![3](https://github.com/StefSimi/IntroductionToRobotics/assets/98825330/b6536628-24ff-4670-b253-8b6120bb0c07)# IntroductionToRobotics
 
 This repository serves as a comprehensive record of my journey through the 'Introduction to Robotics' course during my third year at the Faculty of Mathematics and Computer Science, University of Bucharest. It encompasses a collection of weekly homework assignments, two course projects, and the potential inclusion of personal robotics projects.
 
@@ -279,3 +279,58 @@ This repository serves as a comprehensive record of my journey through the 'Intr
 
   
 </details>
+
+<br>
+<details>
+  <summary>
+    <h2>Homework 7: Matrix Game Checkpoint</h2>
+  </summary>
+  <br>
+
+  ### Task:
+  #### Implement a menu using an LCD display for the matrix game
+
+-<b>Menu</b>: The main menu has 3 options: Start Game, which, as the name suggests, will start the game, settings, which leads to a submenu, where the user can change the brightness of the LCD and the LED Matrix. These values are stored within the EEPROM;<br>
+-<b>HUD</b>: During gameplay, the LCD will constantly, giving the player information. Currently, only the score is shown, but this will change as the game becomes more complex. Aditionally, when the game ends, the final score of the game will be displayed;<br>
+-<b>Sound</b>: In order to make the game more lively, sound effects have been added in the menu. These will play when the player is scrolling through the menu;<br>
+-<b>Matrix Images</b>: When navigating the menu, some images will be displayed on the matrix, (for example, a gear for the settings submenu)
+
+
+<details>
+   <summary>
+     <h3>Parts used:
+   </summary>
+    -Arduino UNO board <br>
+    -2 Breadboards <br>
+    -1 8X8 LED Matrix <br>
+    -1 MAX7219 Driver <br>
+    -1 100nF capacitor<br>
+    -1 10µF capacitor <br>
+    -1 51KΩ Resistor <br>
+    -1 Active Buzzer <br>
+    -1 100Ω Resistor <br>
+    -2 Joysticks <br>
+    -Wires as needed <br>
+    -Cardboard <br>
+    -Duct tape <br>
+    -1 LCD Display <br>
+    -1 220Ω Resistor <br>
+    -1 Potentiometer <br>
+ </details>
+
+
+  ### [Code](https://github.com/StefSimi/IntroductionToRobotics/blob/main/HW7_Matrix_Checkpoint.ino)
+  ### [Video](https://www.youtube.com/watch?v=I2B-TyibE0s)
+
+
+  ### [Fritzing Schematic](https://github.com/StefSimi/IntroductionToRobotics/blob/main/HW7_Matrix_Checkpoint.fzz)
+  ### ![Fritzing schematic](https://github.com/StefSimi/IntroductionToRobotics/assets/98825330/f355bc9f-427a-42c6-9f8d-a215afa13304)
+
+
+  ### Real-life setup:
+  ### ![Setup](https://github.com/StefSimi/IntroductionToRobotics/assets/98825330/940592c9-49e2-4a0b-8a63-65fa4dd98872)
+
+
+  
+</details>
+
