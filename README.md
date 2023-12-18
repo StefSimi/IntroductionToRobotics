@@ -1,4 +1,4 @@
-![3](https://github.com/StefSimi/IntroductionToRobotics/assets/98825330/b6536628-24ff-4670-b253-8b6120bb0c07)# IntroductionToRobotics
+# IntroductionToRobotics
 
 This repository serves as a comprehensive record of my journey through the 'Introduction to Robotics' course during my third year at the Faculty of Mathematics and Computer Science, University of Bucharest. It encompasses a collection of weekly homework assignments, two course projects, and the potential inclusion of personal robotics projects.
 
